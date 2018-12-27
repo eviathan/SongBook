@@ -23,5 +23,13 @@ public class NoteService {
         
         return output
     }
+    
+    class func getChords(key: Note, scale: Scale, type: ChordType) -> [Chord] {
+//        let notes = scale.getNotes()
+        
+        
+        
+        return [Chord]()
+    }
 }
 

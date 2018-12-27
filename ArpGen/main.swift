@@ -9,10 +9,10 @@
 import Foundation
 
 
-let majorScale: Scale = .Major(key: .C)
+let majorScale: Scale = .Major(.Db)
 var notes = majorScale.getNotes()
 print(notes)
 
-let chords = majorScale.getChords()
-print(chords)
+//let chords = majorScale.getChords(type: .Seventh)
+//print(chords)
 

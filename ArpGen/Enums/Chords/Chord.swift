@@ -28,7 +28,8 @@ public enum Chord: CustomStringConvertible {
     case Min9(_ key: Note)
     
     public var description: String {
-        return Mirror(reflecting: self).children.first?.label ?? String(describing: self)
+        let mirror = Mirror(reflecting: self)
+        return mirror.children.first?.label ?? String(describing: self)
     }
 }
 
@@ -53,4 +54,12 @@ extension Chord {
             return [Note]()
         }
     }
+    
+    // TODO: Implement this
+//    func getChordFrom(notes: [Note]) -> Chord {
+//        
+//        
+//        
+//        return .Maj(.C)
+//    }
 }

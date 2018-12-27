@@ -9,10 +9,10 @@
 import Foundation
 
 public enum Scale: CustomStringConvertible {
-    case Major(key: Note)
-    case NaturalMinor(key: Note) // NOTE: Same as Aeolian Mode
-    case HarmonicMinor(key: Note)
-    case MelodicMinor(key: Note)
+    case Major(_ key: Note)
+    case NaturalMinor(_ key: Note)
+    case HarmonicMinor(_ key: Note)
+    case MelodicMinor(_ key: Note)
     
     public var description: String {
         return Mirror(reflecting: self).children.first?.label ?? String(describing: self)
@@ -31,15 +31,14 @@ extension Scale {
         }
     }
     
-    func getChords() -> [Chord] {
-        switch self {
-        case .Major(_):
-            let notes = self.getNotes()
-            return [.Maj(notes[0]), .Min(notes[1]), .Min(notes[2]), .Maj(notes[3]), .Maj(notes[4]), .Min(notes[5]), .Dim(notes[6])]
-
-        default:
-            return [Chord]()
-        }
-    }
+//    func getChords(type: ChordType = .Triad, inversion: Inversion = .Root) -> [Chord] {
+//        switch self {
+//        case .Major(let key): fallthrough
+//        case .NaturalMinor(let key): fallthrough
+//        case .HarmonicMinor(let key): fallthrough
+//        case .MelodicMinor(let key):
+//            return NoteService.getChords(key: key, scale: self, type: type)
+//        }
+//    }
 }
 
