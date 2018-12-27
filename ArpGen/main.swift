@@ -8,5 +8,11 @@
 
 import Foundation
 
-print("Hello, World!")
+
+let majorScale: Scale = .Major(key: .C)
+var notes = majorScale.getNotes()
+print(notes)
+
+let chords = majorScale.getChords()
+print(chords)
 

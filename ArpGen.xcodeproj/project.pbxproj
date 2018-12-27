@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D39903CF21D52162005C8F3E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903CE21D52162005C8F3E /* main.swift */; };
+		D39903D721D52192005C8F3E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903D621D52192005C8F3E /* Note.swift */; };
+		D39903D921D522A9005C8F3E /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903D821D522A9005C8F3E /* Chord.swift */; };
+		D39903DB21D52960005C8F3E /* ScaleDegree.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903DA21D52960005C8F3E /* ScaleDegree.swift */; };
+		D39903DD21D52D36005C8F3E /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903DC21D52D36005C8F3E /* Scale.swift */; };
+		D39903DF21D52F9E005C8F3E /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903DE21D52F9E005C8F3E /* NoteService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,11 @@
 /* Begin PBXFileReference section */
 		D39903CB21D52162005C8F3E /* ArpGen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ArpGen; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39903CE21D52162005C8F3E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D39903D621D52192005C8F3E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		D39903D821D522A9005C8F3E /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
+		D39903DA21D52960005C8F3E /* ScaleDegree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleDegree.swift; sourceTree = "<group>"; };
+		D39903DC21D52D36005C8F3E /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
+		D39903DE21D52F9E005C8F3E /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +67,22 @@
 		D39903CD21D52162005C8F3E /* ArpGen */ = {
 			isa = PBXGroup;
 			children = (
+				D39903D521D52186005C8F3E /* Enums */,
 				D39903CE21D52162005C8F3E /* main.swift */,
+				D39903DE21D52F9E005C8F3E /* NoteService.swift */,
 			);
 			path = ArpGen;
+			sourceTree = "<group>";
+		};
+		D39903D521D52186005C8F3E /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				D39903D621D52192005C8F3E /* Note.swift */,
+				D39903D821D522A9005C8F3E /* Chord.swift */,
+				D39903DA21D52960005C8F3E /* ScaleDegree.swift */,
+				D39903DC21D52D36005C8F3E /* Scale.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +142,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39903DF21D52F9E005C8F3E /* NoteService.swift in Sources */,
 				D39903CF21D52162005C8F3E /* main.swift in Sources */,
+				D39903D721D52192005C8F3E /* Note.swift in Sources */,
+				D39903DB21D52960005C8F3E /* ScaleDegree.swift in Sources */,
+				D39903D921D522A9005C8F3E /* Chord.swift in Sources */,
+				D39903DD21D52D36005C8F3E /* Scale.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +273,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H7GGWR5963;
+				DEVELOPMENT_TEAM = B4MRNC88BC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -255,7 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H7GGWR5963;
+				DEVELOPMENT_TEAM = B4MRNC88BC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
