@@ -8,9 +8,9 @@
 
 import Foundation
 
-public enum Inversion {
-    case Root
-    case First
-    case Second
-    case Third
+public enum Inversion: Int {
+    case Root = 0
+    case First = 1
+    case Second = 2
+    case Third = 3
 }

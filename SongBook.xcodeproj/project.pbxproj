@@ -19,7 +19,8 @@
 		D39903E821D5635A005C8F3E /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903E721D5635A005C8F3E /* Add.swift */; };
 		D39903EA21D56FBB005C8F3E /* Alter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903E921D56FBB005C8F3E /* Alter.swift */; };
 		D39903EC21D5744D005C8F3E /* Secondary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903EB21D5744D005C8F3E /* Secondary.swift */; };
-		D39903EF21D58AA5005C8F3E /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903EE21D58AA5005C8F3E /* ArrayExtensions.swift */; };
+		D39903EF21D58AA5005C8F3E /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903EE21D58AA5005C8F3E /* CollectionExtensions.swift */; };
+		D3AFB45B21D5A98A00BAA80D /* ChordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFB45A21D5A98A00BAA80D /* ChordItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,7 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D39903CB21D52162005C8F3E /* ArpGen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ArpGen; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39903CB21D52162005C8F3E /* SongBook */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SongBook; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39903CE21D52162005C8F3E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D39903D621D52192005C8F3E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D39903D821D522A9005C8F3E /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
@@ -48,7 +49,8 @@
 		D39903E721D5635A005C8F3E /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
 		D39903E921D56FBB005C8F3E /* Alter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alter.swift; sourceTree = "<group>"; };
 		D39903EB21D5744D005C8F3E /* Secondary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secondary.swift; sourceTree = "<group>"; };
-		D39903EE21D58AA5005C8F3E /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		D39903EE21D58AA5005C8F3E /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
+		D3AFB45A21D5A98A00BAA80D /* ChordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +67,7 @@
 		D39903C221D52161005C8F3E = {
 			isa = PBXGroup;
 			children = (
-				D39903CD21D52162005C8F3E /* ArpGen */,
+				D39903CD21D52162005C8F3E /* SongBook */,
 				D39903CC21D52162005C8F3E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,20 +75,21 @@
 		D39903CC21D52162005C8F3E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D39903CB21D52162005C8F3E /* ArpGen */,
+				D39903CB21D52162005C8F3E /* SongBook */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D39903CD21D52162005C8F3E /* ArpGen */ = {
+		D39903CD21D52162005C8F3E /* SongBook */ = {
 			isa = PBXGroup;
 			children = (
+				D3AFB45921D5A98100BAA80D /* Models */,
 				D39903ED21D58A8E005C8F3E /* Extensions */,
 				D39903D521D52186005C8F3E /* Enums */,
 				D39903CE21D52162005C8F3E /* main.swift */,
 				D39903DE21D52F9E005C8F3E /* NoteService.swift */,
 			);
-			path = ArpGen;
+			path = SongBook;
 			sourceTree = "<group>";
 		};
 		D39903D521D52186005C8F3E /* Enums */ = {
@@ -117,17 +120,25 @@
 		D39903ED21D58A8E005C8F3E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D39903EE21D58AA5005C8F3E /* ArrayExtensions.swift */,
+				D39903EE21D58AA5005C8F3E /* CollectionExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D3AFB45921D5A98100BAA80D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3AFB45A21D5A98A00BAA80D /* ChordItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D39903CA21D52162005C8F3E /* ArpGen */ = {
+		D39903CA21D52162005C8F3E /* SongBook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D39903D221D52162005C8F3E /* Build configuration list for PBXNativeTarget "ArpGen" */;
+			buildConfigurationList = D39903D221D52162005C8F3E /* Build configuration list for PBXNativeTarget "SongBook" */;
 			buildPhases = (
 				D39903C721D52162005C8F3E /* Sources */,
 				D39903C821D52162005C8F3E /* Frameworks */,
@@ -137,9 +148,9 @@
 			);
 			dependencies = (
 			);
-			name = ArpGen;
+			name = SongBook;
 			productName = ArpGen;
-			productReference = D39903CB21D52162005C8F3E /* ArpGen */;
+			productReference = D39903CB21D52162005C8F3E /* SongBook */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -157,7 +168,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D39903C621D52161005C8F3E /* Build configuration list for PBXProject "ArpGen" */;
+			buildConfigurationList = D39903C621D52161005C8F3E /* Build configuration list for PBXProject "SongBook" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -169,7 +180,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D39903CA21D52162005C8F3E /* ArpGen */,
+				D39903CA21D52162005C8F3E /* SongBook */,
 			);
 		};
 /* End PBXProject section */
@@ -179,8 +190,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D39903EF21D58AA5005C8F3E /* ArrayExtensions.swift in Sources */,
+				D39903EF21D58AA5005C8F3E /* CollectionExtensions.swift in Sources */,
 				D39903DF21D52F9E005C8F3E /* NoteService.swift in Sources */,
+				D3AFB45B21D5A98A00BAA80D /* ChordItem.swift in Sources */,
 				D39903CF21D52162005C8F3E /* main.swift in Sources */,
 				D39903EC21D5744D005C8F3E /* Secondary.swift in Sources */,
 				D39903E121D560A4005C8F3E /* ChordType.swift in Sources */,
@@ -336,7 +348,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D39903C621D52161005C8F3E /* Build configuration list for PBXProject "ArpGen" */ = {
+		D39903C621D52161005C8F3E /* Build configuration list for PBXProject "SongBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D39903D021D52162005C8F3E /* Debug */,
@@ -345,7 +357,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D39903D221D52162005C8F3E /* Build configuration list for PBXNativeTarget "ArpGen" */ = {
+		D39903D221D52162005C8F3E /* Build configuration list for PBXNativeTarget "SongBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D39903D321D52162005C8F3E /* Debug */,

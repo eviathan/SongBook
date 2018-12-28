@@ -13,6 +13,5 @@ let majorScale: Scale = .Major(.Db)
 var notes = majorScale.getNotes()
 print(notes)
 
-//let chords = majorScale.getChords(type: .Seventh)
-//print(chords)
+print(Chord.Maj7.getNotes(.C, inversion: .Second))
 

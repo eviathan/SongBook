@@ -11,7 +11,7 @@ import Foundation
 public class NoteService {
     private static let chromaticScale: [Note] = [.A, .Bb, .B, .C, .Db, .D, .Eb, .E, .F, .Gb, .G, .Ab]
     
-    class func getNotesFromFormula(_ key: Note, _ degrees: ScaleDegree...) -> [Note] {
+    class func getNotesFromFormula(_ key: Note, _ degrees: [ScaleDegree]) -> [Note] {
         var output = [Note]()
         let indexOfRoot = chromaticScale.firstIndex(of: key) ?? 0
         
@@ -24,12 +24,12 @@ public class NoteService {
         return output
     }
     
-    class func getChords(key: Note, scale: Scale, type: ChordType) -> [Chord] {
-//        let notes = scale.getNotes()
-        
-        
-        
-        return [Chord]()
-    }
+//    class func getChords(key: Note, scale: Scale, type: ChordType) -> [Chord] {
+////        let notes = scale.getNotes()
+//        
+//        
+//        
+//        return [Chord]()
+//    }
 }
 
