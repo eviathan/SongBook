@@ -37,6 +37,6 @@ extension Chord {
     }
     
     func getNotes(key: Note) -> [Note] {
-        return NoteService.getNotesFromIntervals(self.getIntervals(), key: key)
+        return NoteService.getNotes(self.getIntervals(), key: key)
     }
 }

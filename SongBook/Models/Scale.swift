@@ -17,11 +17,11 @@ public class Scale: CustomStringConvertible {
     }
     
     func notes(_ key: Note) -> [Note] {
-        return NoteService.getNotesFromIntervals(type.getIntervals(), key: key)
+        return NoteService.getNotes(type.getIntervals(), key: key)
     }
     
     func chords(style: ChordStyle = .Triad) -> [ChordType] {
-        return ChordService.getChords(self.type)
+        return ChordService.getChordTypes(self.type)
     }
     
     public var description: String {

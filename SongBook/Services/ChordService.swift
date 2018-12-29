@@ -8,10 +8,30 @@
 
 import Foundation
 
+// TODO: IMPLEMENT THESE
 public class ChordService {
-    class func getChords(_ scale: ScaleType) -> [ChordType] {
+    
+    // Chord Type
+    class func getChordType(_ intervals: [Interval]) -> ChordType {
+        return .Maj
+    }
+    
+    class func getChordType(_ intervals: Interval...) -> ChordType {
+        return getChordType(intervals)
+    }
+    
+    class func getChordTypes(_ scaleType: ScaleType) -> [ChordType] {
         //        let notes = scale.getNotes()
         
         return [ChordType]()
+    }
+    
+    // Chord
+    class func getChords(_ notes: [Note]) -> [Chord] {
+        return [Chord]()
+    }
+    
+    class func getChords(_ notes: Note...) -> [Chord] {
+        return getChords(notes)
     }
 }

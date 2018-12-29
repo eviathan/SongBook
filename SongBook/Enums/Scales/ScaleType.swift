@@ -37,6 +37,6 @@ public enum ScaleType: CustomStringConvertible {
     
     func getNotes(_ key: Note) -> [Note] {
         return NoteService
-            .getNotesFromIntervals(self.getIntervals(), key: key)
+            .getNotes(self.getIntervals(), key: key)
     }
 }

@@ -53,7 +53,7 @@ extension ChordType {
     
     func getNotes(_ key: Note, inversion: Inversion = .Root) -> [Note] {
         return NoteService
-            .getNotesFromIntervals(self.getIntervals(), key: key)
+            .getNotes(self.getIntervals(), key: key)
                     .invert(inversion)
     }
 }
