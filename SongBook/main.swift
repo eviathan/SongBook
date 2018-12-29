@@ -9,9 +9,12 @@
 import Foundation
 
 
+//let majorScale: ScaleType = .Major
+//var notes = majorScale.getNotes(.F)
+//print(notes)
+
+//print(Note.Eb.interval(key: .C))
 
 
-
-let majorScale: ScaleType = .Major
-print(majorScale.getIntervals())
+print(ChordService.getChordType(.I, .III, .V, .bVII))
 

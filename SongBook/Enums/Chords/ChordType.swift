@@ -8,29 +8,28 @@
 
 import Foundation
 
-public enum ChordType: CustomStringConvertible {
+public enum ChordType: String, CaseIterable, CustomStringConvertible {
     
-    case Maj
-    case Min
-    case Dom7
-    case Maj7
-    case Min7
-    case Aug
-    case Dim
-    case Dim7
-    case Min7b5
-    case Sus4
-    case Sus2
-    case Sixth
-    case Min6
-    case Ninth
-    case Add9
-    case Maj9
-    case Min9
+    case Maj = "Major"
+    case Min = "Minor"
+    case Dom7 = "Dominant 7th"
+    case Maj7 = "Major 7th"
+    case Min7 = "Minor 7th"
+    case Aug = "Augmented"
+    case Dim = "Diminished"
+    case Dim7 = "Diminished 7th"
+    case Min7b5 = "Minor 7th Flat 5th"
+    case Sus4 = "Suspended 4th"
+    case Sus2 = "Suspended 2nd"
+    case Sixth = "6th"
+    case Min6 = "Minor 6th"
+    case Ninth = "9th"
+    case Add9 = "Add 9"
+    case Maj9 = "Major 9th"
+    case Min9 = "Minor 9th"
     
     public var description: String {
-        let mirror = Mirror(reflecting: self)
-        return mirror.children.first?.label ?? String(describing: self)
+        return self.rawValue
     }
 }
 

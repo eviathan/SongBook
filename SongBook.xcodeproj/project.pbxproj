@@ -23,8 +23,8 @@
 		D3AFB45B21D5A98A00BAA80D /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFB45A21D5A98A00BAA80D /* Chord.swift */; };
 		D3AFB45D21D6DCB700BAA80D /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFB45C21D6DCB700BAA80D /* Scale.swift */; };
 		D3F6B69321D7E6A500BD057A /* ChordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6B69221D7E6A500BD057A /* ChordService.swift */; };
-		D3F6B69821D7E96800BD057A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6B69721D7E96800BD057A /* Constants.swift */; };
 		D3F6B69A21D7F5F400BD057A /* ScaleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6B69921D7F5F400BD057A /* ScaleService.swift */; };
+		D3F6B69C21D8294600BD057A /* Appendix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6B69B21D8294600BD057A /* Appendix.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,8 +57,8 @@
 		D3AFB45A21D5A98A00BAA80D /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
 		D3AFB45C21D6DCB700BAA80D /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
 		D3F6B69221D7E6A500BD057A /* ChordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordService.swift; sourceTree = "<group>"; };
-		D3F6B69721D7E96800BD057A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D3F6B69921D7F5F400BD057A /* ScaleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleService.swift; sourceTree = "<group>"; };
+		D3F6B69B21D8294600BD057A /* Appendix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appendix.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 				D39903ED21D58A8E005C8F3E /* Extensions */,
 				D39903D521D52186005C8F3E /* Enums */,
 				D39903CE21D52162005C8F3E /* main.swift */,
-				D3F6B69721D7E96800BD057A /* Constants.swift */,
+				D3F6B69B21D8294600BD057A /* Appendix.swift */,
 			);
 			path = SongBook;
 			sourceTree = "<group>";
@@ -219,7 +219,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D39903EF21D58AA5005C8F3E /* CollectionExtensions.swift in Sources */,
-				D3F6B69821D7E96800BD057A /* Constants.swift in Sources */,
 				D39903DF21D52F9E005C8F3E /* NoteService.swift in Sources */,
 				D3AFB45B21D5A98A00BAA80D /* Chord.swift in Sources */,
 				D39903CF21D52162005C8F3E /* main.swift in Sources */,
@@ -229,6 +228,7 @@
 				D3F6B69A21D7F5F400BD057A /* ScaleService.swift in Sources */,
 				D39903D721D52192005C8F3E /* Note.swift in Sources */,
 				D39903DB21D52960005C8F3E /* Interval.swift in Sources */,
+				D3F6B69C21D8294600BD057A /* Appendix.swift in Sources */,
 				D39903D921D522A9005C8F3E /* ChordType.swift in Sources */,
 				D39903DD21D52D36005C8F3E /* ScaleType.swift in Sources */,
 				D39903E621D562D0005C8F3E /* Suspension.swift in Sources */,

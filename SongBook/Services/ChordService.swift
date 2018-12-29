@@ -13,7 +13,7 @@ public class ChordService {
     
     // Chord Type
     class func getChordType(_ intervals: [Interval]) -> ChordType {
-        return .Maj
+        return Appendix.instance.chordTypes[intervals] ?? .Maj
     }
     
     class func getChordType(_ intervals: Interval...) -> ChordType {
