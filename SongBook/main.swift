@@ -9,9 +9,9 @@
 import Foundation
 
 
-let majorScale: Scale = .Major(.Db)
-var notes = majorScale.getNotes()
-print(notes)
 
-print(Chord.Maj7.getNotes(.C, inversion: .Second))
+
+
+let majorScale: ScaleType = .Major
+print(majorScale.getIntervals())
 

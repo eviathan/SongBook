@@ -9,18 +9,20 @@
 /* Begin PBXBuildFile section */
 		D39903CF21D52162005C8F3E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903CE21D52162005C8F3E /* main.swift */; };
 		D39903D721D52192005C8F3E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903D621D52192005C8F3E /* Note.swift */; };
-		D39903D921D522A9005C8F3E /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903D821D522A9005C8F3E /* Chord.swift */; };
-		D39903DB21D52960005C8F3E /* ScaleDegree.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903DA21D52960005C8F3E /* ScaleDegree.swift */; };
-		D39903DD21D52D36005C8F3E /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903DC21D52D36005C8F3E /* Scale.swift */; };
+		D39903D921D522A9005C8F3E /* ChordType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903D821D522A9005C8F3E /* ChordType.swift */; };
+		D39903DB21D52960005C8F3E /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903DA21D52960005C8F3E /* Interval.swift */; };
+		D39903DD21D52D36005C8F3E /* ScaleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903DC21D52D36005C8F3E /* ScaleType.swift */; };
 		D39903DF21D52F9E005C8F3E /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903DE21D52F9E005C8F3E /* NoteService.swift */; };
-		D39903E121D560A4005C8F3E /* ChordType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903E021D560A4005C8F3E /* ChordType.swift */; };
+		D39903E121D560A4005C8F3E /* ChordStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903E021D560A4005C8F3E /* ChordStyle.swift */; };
 		D39903E321D56285005C8F3E /* Inversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903E221D56285005C8F3E /* Inversion.swift */; };
 		D39903E621D562D0005C8F3E /* Suspension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903E521D562D0005C8F3E /* Suspension.swift */; };
 		D39903E821D5635A005C8F3E /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903E721D5635A005C8F3E /* Add.swift */; };
 		D39903EA21D56FBB005C8F3E /* Alter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903E921D56FBB005C8F3E /* Alter.swift */; };
 		D39903EC21D5744D005C8F3E /* Secondary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903EB21D5744D005C8F3E /* Secondary.swift */; };
 		D39903EF21D58AA5005C8F3E /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903EE21D58AA5005C8F3E /* CollectionExtensions.swift */; };
-		D3AFB45B21D5A98A00BAA80D /* ChordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFB45A21D5A98A00BAA80D /* ChordItem.swift */; };
+		D3AFB45B21D5A98A00BAA80D /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFB45A21D5A98A00BAA80D /* Chord.swift */; };
+		D3AFB45D21D6DCB700BAA80D /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFB45C21D6DCB700BAA80D /* Scale.swift */; };
+		D3F6B69321D7E6A500BD057A /* ChordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6B69221D7E6A500BD057A /* ChordService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,18 +41,20 @@
 		D39903CB21D52162005C8F3E /* SongBook */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SongBook; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39903CE21D52162005C8F3E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D39903D621D52192005C8F3E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
-		D39903D821D522A9005C8F3E /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
-		D39903DA21D52960005C8F3E /* ScaleDegree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleDegree.swift; sourceTree = "<group>"; };
-		D39903DC21D52D36005C8F3E /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
+		D39903D821D522A9005C8F3E /* ChordType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordType.swift; sourceTree = "<group>"; };
+		D39903DA21D52960005C8F3E /* Interval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
+		D39903DC21D52D36005C8F3E /* ScaleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleType.swift; sourceTree = "<group>"; };
 		D39903DE21D52F9E005C8F3E /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
-		D39903E021D560A4005C8F3E /* ChordType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordType.swift; sourceTree = "<group>"; };
+		D39903E021D560A4005C8F3E /* ChordStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordStyle.swift; sourceTree = "<group>"; };
 		D39903E221D56285005C8F3E /* Inversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inversion.swift; sourceTree = "<group>"; };
 		D39903E521D562D0005C8F3E /* Suspension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suspension.swift; sourceTree = "<group>"; };
 		D39903E721D5635A005C8F3E /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
 		D39903E921D56FBB005C8F3E /* Alter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alter.swift; sourceTree = "<group>"; };
 		D39903EB21D5744D005C8F3E /* Secondary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secondary.swift; sourceTree = "<group>"; };
 		D39903EE21D58AA5005C8F3E /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
-		D3AFB45A21D5A98A00BAA80D /* ChordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordItem.swift; sourceTree = "<group>"; };
+		D3AFB45A21D5A98A00BAA80D /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
+		D3AFB45C21D6DCB700BAA80D /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
+		D3F6B69221D7E6A500BD057A /* ChordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +87,11 @@
 		D39903CD21D52162005C8F3E /* SongBook */ = {
 			isa = PBXGroup;
 			children = (
+				D3F6B69121D7E68C00BD057A /* Services */,
 				D3AFB45921D5A98100BAA80D /* Models */,
 				D39903ED21D58A8E005C8F3E /* Extensions */,
 				D39903D521D52186005C8F3E /* Enums */,
 				D39903CE21D52162005C8F3E /* main.swift */,
-				D39903DE21D52F9E005C8F3E /* NoteService.swift */,
 			);
 			path = SongBook;
 			sourceTree = "<group>";
@@ -97,8 +101,8 @@
 			children = (
 				D39903E421D5628F005C8F3E /* Chords */,
 				D39903D621D52192005C8F3E /* Note.swift */,
-				D39903DA21D52960005C8F3E /* ScaleDegree.swift */,
-				D39903DC21D52D36005C8F3E /* Scale.swift */,
+				D39903DA21D52960005C8F3E /* Interval.swift */,
+				D39903DC21D52D36005C8F3E /* ScaleType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -106,8 +110,8 @@
 		D39903E421D5628F005C8F3E /* Chords */ = {
 			isa = PBXGroup;
 			children = (
-				D39903D821D522A9005C8F3E /* Chord.swift */,
-				D39903E021D560A4005C8F3E /* ChordType.swift */,
+				D39903D821D522A9005C8F3E /* ChordType.swift */,
+				D39903E021D560A4005C8F3E /* ChordStyle.swift */,
 				D39903E221D56285005C8F3E /* Inversion.swift */,
 				D39903E521D562D0005C8F3E /* Suspension.swift */,
 				D39903E721D5635A005C8F3E /* Add.swift */,
@@ -128,9 +132,19 @@
 		D3AFB45921D5A98100BAA80D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D3AFB45A21D5A98A00BAA80D /* ChordItem.swift */,
+				D3AFB45A21D5A98A00BAA80D /* Chord.swift */,
+				D3AFB45C21D6DCB700BAA80D /* Scale.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D3F6B69121D7E68C00BD057A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D39903DE21D52F9E005C8F3E /* NoteService.swift */,
+				D3F6B69221D7E6A500BD057A /* ChordService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,17 +206,19 @@
 			files = (
 				D39903EF21D58AA5005C8F3E /* CollectionExtensions.swift in Sources */,
 				D39903DF21D52F9E005C8F3E /* NoteService.swift in Sources */,
-				D3AFB45B21D5A98A00BAA80D /* ChordItem.swift in Sources */,
+				D3AFB45B21D5A98A00BAA80D /* Chord.swift in Sources */,
 				D39903CF21D52162005C8F3E /* main.swift in Sources */,
 				D39903EC21D5744D005C8F3E /* Secondary.swift in Sources */,
-				D39903E121D560A4005C8F3E /* ChordType.swift in Sources */,
+				D39903E121D560A4005C8F3E /* ChordStyle.swift in Sources */,
 				D39903E821D5635A005C8F3E /* Add.swift in Sources */,
 				D39903D721D52192005C8F3E /* Note.swift in Sources */,
-				D39903DB21D52960005C8F3E /* ScaleDegree.swift in Sources */,
-				D39903D921D522A9005C8F3E /* Chord.swift in Sources */,
-				D39903DD21D52D36005C8F3E /* Scale.swift in Sources */,
+				D39903DB21D52960005C8F3E /* Interval.swift in Sources */,
+				D39903D921D522A9005C8F3E /* ChordType.swift in Sources */,
+				D39903DD21D52D36005C8F3E /* ScaleType.swift in Sources */,
 				D39903E621D562D0005C8F3E /* Suspension.swift in Sources */,
 				D39903E321D56285005C8F3E /* Inversion.swift in Sources */,
+				D3AFB45D21D6DCB700BAA80D /* Scale.swift in Sources */,
+				D3F6B69321D7E6A500BD057A /* ChordService.swift in Sources */,
 				D39903EA21D56FBB005C8F3E /* Alter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
