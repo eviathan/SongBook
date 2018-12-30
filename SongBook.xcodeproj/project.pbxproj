@@ -25,6 +25,8 @@
 		D3F6B69321D7E6A500BD057A /* ChordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6B69221D7E6A500BD057A /* ChordService.swift */; };
 		D3F6B69A21D7F5F400BD057A /* ScaleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6B69921D7F5F400BD057A /* ScaleService.swift */; };
 		D3F6B69C21D8294600BD057A /* Appendix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6B69B21D8294600BD057A /* Appendix.swift */; };
+		D3F6B69E21D9378200BD057A /* ScaleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6B69D21D9378200BD057A /* ScaleStyle.swift */; };
+		D3F6B6A121D938DD00BD057A /* MajorModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6B6A021D938DD00BD057A /* MajorModes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +61,8 @@
 		D3F6B69221D7E6A500BD057A /* ChordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordService.swift; sourceTree = "<group>"; };
 		D3F6B69921D7F5F400BD057A /* ScaleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleService.swift; sourceTree = "<group>"; };
 		D3F6B69B21D8294600BD057A /* Appendix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appendix.swift; sourceTree = "<group>"; };
+		D3F6B69D21D9378200BD057A /* ScaleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleStyle.swift; sourceTree = "<group>"; };
+		D3F6B6A021D938DD00BD057A /* MajorModes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorModes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,9 +160,19 @@
 		D3F6B69621D7E76800BD057A /* Scales */ = {
 			isa = PBXGroup;
 			children = (
+				D3F6B69F21D938CE00BD057A /* Modes */,
 				D39903DC21D52D36005C8F3E /* ScaleType.swift */,
+				D3F6B69D21D9378200BD057A /* ScaleStyle.swift */,
 			);
 			path = Scales;
+			sourceTree = "<group>";
+		};
+		D3F6B69F21D938CE00BD057A /* Modes */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6B6A021D938DD00BD057A /* MajorModes.swift */,
+			);
+			path = Modes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,8 +236,10 @@
 				D39903DF21D52F9E005C8F3E /* NoteService.swift in Sources */,
 				D3AFB45B21D5A98A00BAA80D /* Chord.swift in Sources */,
 				D39903CF21D52162005C8F3E /* main.swift in Sources */,
+				D3F6B6A121D938DD00BD057A /* MajorModes.swift in Sources */,
 				D39903EC21D5744D005C8F3E /* Secondary.swift in Sources */,
 				D39903E121D560A4005C8F3E /* ChordStyle.swift in Sources */,
+				D3F6B69E21D9378200BD057A /* ScaleStyle.swift in Sources */,
 				D39903E821D5635A005C8F3E /* Add.swift in Sources */,
 				D3F6B69A21D7F5F400BD057A /* ScaleService.swift in Sources */,
 				D39903D721D52192005C8F3E /* Note.swift in Sources */,

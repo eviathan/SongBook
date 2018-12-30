@@ -10,7 +10,7 @@ import Foundation
 
 public class Scale: CustomStringConvertible {
     
-    var type: ScaleType = .Major
+    var type: ScaleType = .Major(.Ionian)
     
     init(_ type: ScaleType) {
         self.type = type
