@@ -132,10 +132,6 @@ extension ChordType {
         case .Sus4: return []
         case .Sus2: return []
         case .Sharp11: return []
-            
-        // TODO: Finish adding chord formulas
-        default:
-            return [Interval]()
         }
     }
     
