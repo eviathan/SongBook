@@ -17,4 +17,5 @@ import Foundation
 
 
 print(ChordService.getChordType(.I, .III, .V, .bVII))
+print(ChordService.getChordType(.I, .III, .V, .VII))
 

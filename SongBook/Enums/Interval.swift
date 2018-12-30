@@ -22,20 +22,42 @@ public enum Interval: Int, CustomStringConvertible {
     case bVII = 10
     case VII = 11
     
+    // SECOND OCTAVE
+    // NOTE: Commented out notes are fore reference and not used
+//    case VIII = 12
+    case bIX = 13
+    case IX = 14
+    case bX = 15
+//    case X = 16
+    case XI = 17
+    case bXII = 18
+//    case XII = 19
+    case bXIII = 20
+    case XIII = 21
+//    case bXIV = 22
+//    case XIV = 23
+    
     public var description: String {
         switch self {
-        case .I: return "I"
-        case .bII: return "bII"
-        case .II: return "II"
-        case .bIII: return "bIII"
-        case .III: return "III"
-        case .IV: return "IV"
-        case .bV: return "bV"
-        case .V: return "V"
-        case .bVI: return "bVI"
-        case .VI: return "VI"
-        case .bVII: return "bVII"
-        case .VII: return "VII"
+        case .I: return "R"
+        case .bII: return "b2"
+        case .II: return "2"
+        case .bIII: return "b3"
+        case .III: return "3"
+        case .IV: return "4"
+        case .bV: return "b5"
+        case .V: return "5"
+        case .bVI: return "b6"
+        case .VI: return "6"
+        case .bVII: return "b7"
+        case .VII: return "7"
+        case .bIX: return "b9"
+        case .IX: return "9"
+        case .bX: return "9#"
+        case .XI: return "11"
+        case .bXII: return "11#"
+        case .bXIII: return "b13"
+        case .XIII: return "13"
         }
     }
 }
