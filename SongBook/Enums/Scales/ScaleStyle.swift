@@ -9,6 +9,8 @@
 import Foundation
 
 public enum ScaleStyle: Int {
+    case Tritonic = 3
+    case Tetratonic = 4
     case Pentatonic = 5
     case Hexatonic = 6
     case Heptatonic = 7

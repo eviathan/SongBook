@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum MajorModes: Int {
+public enum MajorMode: Int {
     case Ionian = 0
     case Dorian = 1
     case Phrygian = 2

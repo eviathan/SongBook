@@ -10,29 +10,13 @@ import Foundation
 
 public enum ScaleType: CustomStringConvertible {
     
-    // Major (w/Modes)
-    case Major(_ mode: MajorModes)
+    // Major
+    case Major(_ mode: MajorMode?)
     
-    // (Natural) Minor
+    // Minor
     case Minor
-    
-    // Harmonic Minor (w/Modes)
-    case HarmonicMinor
-    case Locrian13
-    case IonianSharp5
-    case DorianSharp11
-    case PhrygianDominant
-    case LydianSharp2
-    case SuperLocrianbb7
-    
-    // Meoldic Minor (w/Modes)
-    case MelodicMinor
-    case Dorianb2
-    case LydianAugmented
-    case LydianDominant
-    case Mixolydianb6
-    case Aeolianb5
-    case AlteredScale
+    case HarmonicMinor(_ mode: HarmonicMinorMode?)
+    case MelodicMinor(_ mode: MelodicMinorMode?)
     
     // Pentatonics
     case MajorPentatonic
@@ -53,14 +37,18 @@ public enum ScaleType: CustomStringConvertible {
         switch self {
         // Major Modes
         case .Major(let mode): do {
-            switch mode {
-            case .Ionian: return [.I, .II, .III, .IV, .V, .VI, .VII]
-            case .Dorian: return [.I, .II, .bIII, .IV, .V, .VI, .bVII]
-            case .Phrygian: return [.I, .bII, .bIII, .IV, .V, .bVI, .bVII]
-            case .Lydian: return [.I, .II, .III, .bV, .V, .VI, .VII]
-            case .Mixolydian: return [.I, .II, .III, .IV, .V, .VI, .bVII]
-            case .Aeolian: return [.I, .II, .bIII, .IV, .V, .bVI, .bVII]
-            case .Locrian: return [.I, .bII, .bIII, .IV, .bV, .bVI, .bVII]
+            if let m = mode {
+                switch m {
+                case .Ionian: return [.I, .II, .III, .IV, .V, .VI, .VII]
+                case .Dorian: return [.I, .II, .bIII, .IV, .V, .VI, .bVII]
+                case .Phrygian: return [.I, .bII, .bIII, .IV, .V, .bVI, .bVII]
+                case .Lydian: return [.I, .II, .III, .bV, .V, .VI, .VII]
+                case .Mixolydian: return [.I, .II, .III, .IV, .V, .VI, .bVII]
+                case .Aeolian: return [.I, .II, .bIII, .IV, .V, .bVI, .bVII]
+                case .Locrian: return [.I, .bII, .bIII, .IV, .bV, .bVI, .bVII]
+                }
+            } else {
+                return ScaleType.Major(.Ionian).intervals
             }
         }
         
@@ -68,23 +56,38 @@ public enum ScaleType: CustomStringConvertible {
         case .Minor: return ScaleType.Major(.Aeolian).intervals
             
         // Harmonic Minor (w/Modes)
-        case .HarmonicMinor: return [.I, .II, .bIII, .IV, .V, .bVI, .VII]
-        case .Locrian13: return [.I, .bII, .bIII, .IV, .bV, .VI, .bVII]
-        case .IonianSharp5: return [.I, .II, .III, .IV, .bVI, .VI, .VII]
-        case .DorianSharp11: return [.I, .II, .bIII, .bV, .V, .VI, .bVII]
-        case .PhrygianDominant: return [.I, .bII, .III, .IV, .V, .bVI, .bVII]
-        case .LydianSharp2: return [.I, .bIII, .III, .bV, .V, .VI, .VII]
-        case .SuperLocrianbb7: return [.I, .bII, .bIII, .III, .bV, .bVI, .bVII]
+        case .HarmonicMinor(let mode): do {
+            if let m = mode {
+                switch m {
+                case .HarmonicMinor: return [.I, .II, .bIII, .IV, .V, .bVI, .VII]
+                case .Locrian13: return [.I, .bII, .bIII, .IV, .bV, .VI, .bVII]
+                case .IonianSharp5: return [.I, .II, .III, .IV, .bVI, .VI, .VII]
+                case .DorianSharp11: return [.I, .II, .bIII, .bV, .V, .VI, .bVII]
+                case .PhrygianDominant: return [.I, .bII, .III, .IV, .V, .bVI, .bVII]
+                case .LydianSharp2: return [.I, .bIII, .III, .bV, .V, .VI, .VII]
+                case .SuperLocrianbb7: return [.I, .bII, .bIII, .III, .bV, .bVI, .bVII]
+                }
+            } else {
+                return ScaleType.HarmonicMinor(.HarmonicMinor).intervals
+            }
+        }
             
         // Meoldic Minor (w/Modes)
-        case .MelodicMinor: return [.I, .II, .bIII, .IV, .V, .VI, .VII]
-        case .Dorianb2: return [.I, .bII, .bIII, .IV, .V, .VI, .bVII]
-        case .LydianAugmented: return [.I, .bII, .bIII, .bV, .bVI, .VI, .bVII]
-        case .LydianDominant: return [.I, .II, .III, .bV, .V, .VI, .bVII]
-        case .Mixolydianb6: return [.I, .II, .III, .IV, .V, .bVI, .bVII]
-        case .Aeolianb5: return [.I, .II, .bIII, .IV, .bV, .bVI, .bVII]
-        case .AlteredScale: return [.I, .bII, .bIII, .III, .bV, .bVI, .bVII]
-            
+        case .MelodicMinor(let mode): do {
+            if let m = mode {
+                switch m {
+                case .MelodicMinor: return [.I, .II, .bIII, .IV, .V, .VI, .VII]
+                case .Dorianb2: return [.I, .bII, .bIII, .IV, .V, .VI, .bVII]
+                case .LydianAugmented: return [.I, .bII, .bIII, .bV, .bVI, .VI, .bVII]
+                case .LydianDominant: return [.I, .II, .III, .bV, .V, .VI, .bVII]
+                case .Mixolydianb6: return [.I, .II, .III, .IV, .V, .bVI, .bVII]
+                case .Aeolianb5: return [.I, .II, .bIII, .IV, .bV, .bVI, .bVII]
+                case .AlteredScale: return [.I, .bII, .bIII, .III, .bV, .bVI, .bVII]
+                }
+            } else {
+                return ScaleType.HarmonicMinor(.HarmonicMinor).intervals
+            }
+        }
             
         // Pentatonics
         case .MajorPentatonic: return [.I, .II, .III, .V, .VI]
@@ -93,11 +96,11 @@ public enum ScaleType: CustomStringConvertible {
         // Blues
         case .Blues(let style): do {
             switch style {
-            case .Pentatonic: return [.I, .II, .III, .V, .VI]
             case .Hexatonic: return [.I, .II, .III, .V, .VI]
             case .Heptatonic: return [.I, .II, .III, .V, .VI]
-            case .Octatonic: return [.I, .II, .III, .V, .VI]
             case .Nonatonic: return [.I, .II, .III, .V, .VI]
+                
+            default: return ScaleType.Blues(.Heptatonic).intervals
             }
         }
             
