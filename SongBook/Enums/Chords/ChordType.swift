@@ -90,19 +90,19 @@ extension ChordType {
             
         // Minor
         case .Min: return [.I, .bIII, .V]
-        case .MinAdd4: return []
-        case .Min6: return []
+        case .MinAdd4: return [.I, .bIII, .IV, .V]
+        case .Min6: return [.I, .bIII, .V, .VI]
         case .Min7: return [.I, .bIII, .V, .bVII]
-        case .MinAdd9: return []
-        case .Min6Add9: return []
-        case .Min9: return []
-        case .Min11: return []
-        case .Min13: return []
-        case .MinMaj7: return []
-        case .MinMaj9: return []
-        case .MinMaj11: return []
-        case .MinMaj13: return []
-        case .Min7b5: return []
+        case .MinAdd9: return [.I, .bIII, .V, .IX]
+        case .Min6Add9: return [.I, .bIII, .V, .VI, .IX]
+        case .Min9: return [.I, .bIII, .V, .bVII, .IX]
+        case .Min11: return [.I, .bIII, ]
+        case .Min13: return [.I, .bIII, ]
+        case .MinMaj7: return [.I, .bIII, ]
+        case .MinMaj9: return [.I, .bIII, ]
+        case .MinMaj11: return [.I, .bIII, ]
+        case .MinMaj13: return [.I, .bIII, ]
+        case .Min7b5: return [.I, .bIII, ]
             
         // Dominant
         case .Dom7: return [.I, .III, .V, .bVII]
@@ -124,14 +124,14 @@ extension ChordType {
         // Symmetrical
         case .Aug: return [.I, .III, .bVI]
         case .Dim: return [.I, .bIII, .bVI]
-        case .Dim7: return []
+        case .Dim7: return [.I, .bIII, .bVI, .bVII]
             
         // Misc
-        case .Fifth: return []
-        case .FlatFifth: return []
-        case .Sus4: return []
-        case .Sus2: return []
-        case .Sharp11: return []
+        case .Fifth: return [.I, .V]
+        case .FlatFifth: return [.I, .bV]
+        case .Sus4: return [.I, .IV, .V]
+        case .Sus2: return [.I, .II, .V]
+        case .Sharp11: return [.I, .V, .bXII]
         }
     }
     
