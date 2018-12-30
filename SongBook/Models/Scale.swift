@@ -17,7 +17,7 @@ public class Scale: CustomStringConvertible {
     }
     
     func notes(_ key: Note) -> [Note] {
-        return NoteService.getNotes(type.getIntervals(), key: key)
+        return NoteService.getNotes(type.intervals, key: key)
     }
     
     func chords(style: ChordStyle = .Triad) -> [ChordType] {

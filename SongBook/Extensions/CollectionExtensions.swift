@@ -8,26 +8,26 @@
 
 import Foundation
 
-extension Collection {
-
-    
-        mutating func reverse()
-        {
-//            (0..<count/2).forEach{ swap(&self[$0],&self[count-$0-1]) }
-        }
-}
+//extension Collection {
+//
+//    
+//        mutating func reverse()
+//        {
+////            (0..<count/2).forEach{ swap(&self[$0],&self[count-$0-1]) }
+//        }
+//}
 
 extension Collection where Element == Note {
-    func rotate(by rotations:Int) -> [Note]
+    private func rotate(by rotations:Int) -> [Note]
     {
         var notes = self as! [Note]
-        if rotations <= 0 {
+        if rotations%notes.count <= 0 {
             return notes
         }
         
         var output = [Note]()
         
-        var offset = rotations
+        var offset = rotations%notes.count
         if (rotations > notes.count) {
             offset = offset % notes.count
         }

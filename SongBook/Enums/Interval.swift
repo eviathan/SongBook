@@ -23,7 +23,7 @@ public enum Interval: Int, CustomStringConvertible {
     case VII = 11
     
     // SECOND OCTAVE
-    // NOTE: Commented out notes are fore reference and not used
+    // NOTE: Commented out notes are for reference and not used
 //    case VIII = 12
     case bIX = 13
     case IX = 14
@@ -36,6 +36,23 @@ public enum Interval: Int, CustomStringConvertible {
     case XIII = 21
 //    case bXIV = 22
 //    case XIV = 23
+    
+    public var noteIndex: Int {
+        switch self {
+        case .I: return 0
+        case .bII, .bIX: return 1
+        case .II, .IX: return 2
+        case .bIII, .bX: return 3
+        case .III: return 4
+        case .IV, .XI: return 5
+        case .bV, .bXII: return 6
+        case .V: return 7
+        case .bVI, .bXIII: return 8
+        case .VI, .XIII: return 9
+        case .bVII: return 10
+        case .VII: return 11
+        }
+    }
     
     public var description: String {
         switch self {

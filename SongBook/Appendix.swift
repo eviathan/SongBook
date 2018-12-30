@@ -21,7 +21,7 @@ public class Appendix {
     
     private func getChordDict() -> [[Interval]:ChordType] {
         return ChordType.allCases.reduce(into: [[Interval]: ChordType]()) {
-            $0[$1.getIntervals()] = $1
+            $0[$1.intervals] = $1
         }
     }
 }

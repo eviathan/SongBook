@@ -24,7 +24,7 @@ public enum ScaleType: CustomStringConvertible {
         return mirror.children.first?.label ?? String(describing: self)
     }
     
-    func getIntervals() -> [Interval] {
+    var intervals: [Interval] {
         switch self {
         case .Major: return [.I, .II, .III, .IV, .V, .VI, .VII]
         case .Minor: return [.I, .II, .bIII, .IV, .V, .bVI, .bVII]
@@ -37,6 +37,6 @@ public enum ScaleType: CustomStringConvertible {
     
     func getNotes(_ key: Note) -> [Note] {
         return NoteService
-            .getNotes(self.getIntervals(), key: key)
+            .getNotes(self.intervals, key: key)
     }
 }

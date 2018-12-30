@@ -8,6 +8,7 @@
 
 import Foundation
 
+// TODO: Figure out how to deal with optional notes
 public enum ChordType: String, CaseIterable, CustomStringConvertible {
     
     // Major
@@ -73,7 +74,7 @@ public enum ChordType: String, CaseIterable, CustomStringConvertible {
 }
 
 extension ChordType {
-    func getIntervals() -> [Interval] {
+    var intervals: [Interval] {
         switch self {
             
         // Major
@@ -83,8 +84,8 @@ extension ChordType {
         case .SixNine: return [.I, .III, .V, .IX]
         case .Maj7: return [.I, .III, .V, .VII]
         case .Maj9: return [.I, .III, .V, .VII, .IX]
-        case .Maj11: return [.I, .III, .V, .VII, .XI]
-        case .Maj13: return [.I, .III, .V, .VI, .XIII]
+        case .Maj11: return [.I, .III, .V, .VII, .IX, .XI]
+        case .Maj13: return [.I, .III, .V, .VI, .IX, .XI, .XIII]
         case .Maj7Sharp11: return [.I, .III, .V, .VII, .bXII]
         case .Majb5: return [.I, .III, .bV]
             
@@ -96,30 +97,30 @@ extension ChordType {
         case .MinAdd9: return [.I, .bIII, .V, .IX]
         case .Min6Add9: return [.I, .bIII, .V, .VI, .IX]
         case .Min9: return [.I, .bIII, .V, .bVII, .IX]
-        case .Min11: return [.I, .bIII, ]
-        case .Min13: return [.I, .bIII, ]
-        case .MinMaj7: return [.I, .bIII, ]
-        case .MinMaj9: return [.I, .bIII, ]
-        case .MinMaj11: return [.I, .bIII, ]
-        case .MinMaj13: return [.I, .bIII, ]
-        case .Min7b5: return [.I, .bIII, ]
+        case .Min11: return [.I, .bIII, .V, .bVII, .IX, .XI]
+        case .Min13: return [.I, .bIII, .V, .bVII, .IX, .XI, .XIII]
+        case .MinMaj7: return [.I, .bIII, .V, .VII]
+        case .MinMaj9: return [.I, .bIII, .V, .VII, .IX]
+        case .MinMaj11: return [.I, .bIII, .V, .VII, .IX, .XI]
+        case .MinMaj13: return [.I, .bIII, .V, .VII, .IX, .XI, .XIII]
+        case .Min7b5: return [.I, .bIII, .bV, .bVII]
             
         // Dominant
         case .Dom7: return [.I, .III, .V, .bVII]
-        case .Dom9: return []
-        case .Dom11: return []
-        case .Dom13: return []
-        case .Dom7Sharp5: return []
-        case .Dom7b5: return []
-        case .Dom7Sharp9: return []
-        case .Dom7b9: return []
-        case .Dom9Sharp5: return []
-        case .Dom9b5: return []
-        case .Dom7Sharp5Sharp9: return []
-        case .Dom7Sharp5b9: return []
-        case .Dom7b5Sharp9: return []
-        case .Dom7b5b9: return []
-        case .Dom7Sharp11: return []
+        case .Dom9: return [.I, .III, .V, .bVII, .IX]
+        case .Dom11: return [.I, .III, .V, .bVII, .XI]
+        case .Dom13: return [.I, .III, .V, .bVII, .IX, .XI, .XIII]
+        case .Dom7Sharp5: return [.I, .III, .bVI, .bVII]
+        case .Dom7b5: return [.I, .III, .bV, .bVII]
+        case .Dom7Sharp9: return [.I, .III, .V, .bVII, .bIX]
+        case .Dom7b9: return [.I, .III, .V, .bX]
+        case .Dom9Sharp5: return [.I, .III, .bVI, .bVII, .IX]
+        case .Dom9b5: return [.I, .III, .bV, .bVII, .IX]
+        case .Dom7Sharp5Sharp9: return [.I, .III, .bVI, .bVII, .bX]
+        case .Dom7Sharp5b9: return [.I, .III, .bVI, .bVII, .bIX]
+        case .Dom7b5Sharp9: return [.I, .III, .bV, .bVII, .bX]
+        case .Dom7b5b9: return [.I, .III, .bV, .bVII, .bIX]
+        case .Dom7Sharp11: return [.I, .III, .V, .bVII, .bXII]
             
         // Symmetrical
         case .Aug: return [.I, .III, .bVI]
@@ -137,7 +138,7 @@ extension ChordType {
     
     func getNotes(_ key: Note, inversion: Inversion = .Root) -> [Note] {
         return NoteService
-            .getNotes(self.getIntervals(), key: key)
+            .getNotes(self.intervals, key: key)
                     .invert(inversion)
     }
 }
