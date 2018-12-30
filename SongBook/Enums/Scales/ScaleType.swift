@@ -25,8 +25,9 @@ public enum ScaleType: CustomStringConvertible {
     // Blues
     case Blues(_ style: ScaleStyle)
     
-    // Eastern
     // Wholetone & Diminished
+    case Wholetone
+    case Diminished
     
     public var description: String {
         let mirror = Mirror(reflecting: self)
@@ -96,17 +97,18 @@ public enum ScaleType: CustomStringConvertible {
         // Blues
         case .Blues(let style): do {
             switch style {
-            case .Hexatonic: return [.I, .II, .III, .V, .VI]
-            case .Heptatonic: return [.I, .II, .III, .V, .VI]
-            case .Nonatonic: return [.I, .II, .III, .V, .VI]
+            case .Hexatonic: return [.I, .bIII, .IV, .bV, .V, .bVII]
+            case .Heptatonic: return [.I, .II, .bIII, .IV, .bV, .VI, .bVII]
+            case .Nonatonic: return [.I, .II, .bIII, .bIII, .IV, .bV, .V, .VI, .bVII]
                 
             default: return ScaleType.Blues(.Heptatonic).intervals
             }
         }
             
-        // Eastern
-            
         // Wholetone & Diminished
+        case .Wholetone: return [.I, .II, .III, .bV, .bVI, .bVII]
+        case .Diminished: return [.I, .bII, .bIII, .III, .bV, .V, .VI, .VII]
+            
         }
     }
     
