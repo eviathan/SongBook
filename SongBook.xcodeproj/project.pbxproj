@@ -22,6 +22,8 @@
 		D39903EF21D58AA5005C8F3E /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39903EE21D58AA5005C8F3E /* CollectionExtensions.swift */; };
 		D3AFB45B21D5A98A00BAA80D /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFB45A21D5A98A00BAA80D /* Chord.swift */; };
 		D3AFB45D21D6DCB700BAA80D /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFB45C21D6DCB700BAA80D /* Scale.swift */; };
+		D3B6972F21D9910700855E50 /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6972E21D9910700855E50 /* Degree.swift */; };
+		D3B6973121D99F5E00855E50 /* RuntimeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6973021D99F5E00855E50 /* RuntimeError.swift */; };
 		D3F6B69321D7E6A500BD057A /* ChordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6B69221D7E6A500BD057A /* ChordService.swift */; };
 		D3F6B69A21D7F5F400BD057A /* ScaleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6B69921D7F5F400BD057A /* ScaleService.swift */; };
 		D3F6B69C21D8294600BD057A /* Appendix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6B69B21D8294600BD057A /* Appendix.swift */; };
@@ -60,6 +62,8 @@
 		D39903EE21D58AA5005C8F3E /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
 		D3AFB45A21D5A98A00BAA80D /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
 		D3AFB45C21D6DCB700BAA80D /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
+		D3B6972E21D9910700855E50 /* Degree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
+		D3B6973021D99F5E00855E50 /* RuntimeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeError.swift; sourceTree = "<group>"; };
 		D3F6B69221D7E6A500BD057A /* ChordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordService.swift; sourceTree = "<group>"; };
 		D3F6B69921D7F5F400BD057A /* ScaleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleService.swift; sourceTree = "<group>"; };
 		D3F6B69B21D8294600BD057A /* Appendix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appendix.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 		D39903CD21D52162005C8F3E /* SongBook */ = {
 			isa = PBXGroup;
 			children = (
+				D3B6973221D99F6200855E50 /* Errors */,
 				D3F6B69121D7E68C00BD057A /* Services */,
 				D3AFB45921D5A98100BAA80D /* Models */,
 				D39903ED21D58A8E005C8F3E /* Extensions */,
@@ -151,6 +156,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D3B6973221D99F6200855E50 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				D3B6973021D99F5E00855E50 /* RuntimeError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		D3F6B69121D7E68C00BD057A /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +179,7 @@
 			children = (
 				D3F6B69F21D938CE00BD057A /* Modes */,
 				D39903DC21D52D36005C8F3E /* ScaleType.swift */,
+				D3B6972E21D9910700855E50 /* Degree.swift */,
 				D3F6B69D21D9378200BD057A /* ScaleStyle.swift */,
 			);
 			path = Scales;
@@ -241,6 +255,8 @@
 				D39903EF21D58AA5005C8F3E /* CollectionExtensions.swift in Sources */,
 				D39903DF21D52F9E005C8F3E /* NoteService.swift in Sources */,
 				D3AFB45B21D5A98A00BAA80D /* Chord.swift in Sources */,
+				D3B6973121D99F5E00855E50 /* RuntimeError.swift in Sources */,
+				D3B6972F21D9910700855E50 /* Degree.swift in Sources */,
 				D39903CF21D52162005C8F3E /* main.swift in Sources */,
 				D3F6B6A121D938DD00BD057A /* MajorMode.swift in Sources */,
 				D39903EC21D5744D005C8F3E /* Secondary.swift in Sources */,

@@ -9,6 +9,8 @@
 import Foundation
 
 public enum Interval: Int, CustomStringConvertible {
+ 
+    // FIRST OCTAVE
     case I = 0
     case bII = 1
     case II = 2
@@ -22,38 +24,24 @@ public enum Interval: Int, CustomStringConvertible {
     case bVII = 10
     case VII = 11
     
-    // SECOND OCTAVE
-    // NOTE: Commented out notes are for reference and not used
-//    case VIII = 12
-    case bIX = 13
-    case IX = 14
-    case bX = 15
-//    case X = 16
-    case XI = 17
-    case bXII = 18
-//    case XII = 19
-    case bXIII = 20
-    case XIII = 21
-//    case bXIV = 22
-//    case XIV = 23
-    
     public var noteIndex: Int {
         switch self {
         case .I: return 0
-        case .bII, .bIX: return 1
-        case .II, .IX: return 2
-        case .bIII, .bX: return 3
+        case .bII: return 1
+        case .II: return 2
+        case .bIII: return 3
         case .III: return 4
-        case .IV, .XI: return 5
-        case .bV, .bXII: return 6
+        case .IV: return 5
+        case .bV: return 6
         case .V: return 7
-        case .bVI, .bXIII: return 8
-        case .VI, .XIII: return 9
+        case .bVI: return 8
+        case .VI: return 9
         case .bVII: return 10
         case .VII: return 11
         }
     }
     
+    // TODO: SORT THIS MESS OUT
     public var description: String {
         switch self {
         case .I: return "R"
@@ -68,13 +56,6 @@ public enum Interval: Int, CustomStringConvertible {
         case .VI: return "6"
         case .bVII: return "b7"
         case .VII: return "7"
-        case .bIX: return "b9"
-        case .IX: return "9"
-        case .bX: return "9#"
-        case .XI: return "11"
-        case .bXII: return "11#"
-        case .bXIII: return "b13"
-        case .XIII: return "13"
         }
     }
 }

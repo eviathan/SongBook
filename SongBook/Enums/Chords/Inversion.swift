@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum Inversion: Int {
+public enum Inversion: Int, CaseIterable {
     case Root = 0
     case First = 1
     case Second = 2

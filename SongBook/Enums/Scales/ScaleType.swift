@@ -34,6 +34,10 @@ public enum ScaleType: CustomStringConvertible {
         return mirror.children.first?.label ?? String(describing: self)
     }
     
+    var degrees: [Degree] {
+        return Array(Degree.allCases.prefix(self.intervals.count))
+    }
+    
     var intervals: [Interval] {
         switch self {
         // Major Modes
@@ -113,7 +117,14 @@ public enum ScaleType: CustomStringConvertible {
     }
     
     func getNotes(_ key: Note) -> [Note] {
-        return NoteService
-            .getNotes(self.intervals, key: key)
+        return NoteService.getNotes(self.intervals, key: key)
+    }
+    
+    func getInterval(_ current: Degree, next: Degree) -> Interval {
+        
+        let currentIndex = current.rawValue % self.intervals.count
+        let nextIndex = (next.rawValue + currentIndex) % self.intervals.count
+        
+        return self.intervals[nextIndex % self.intervals.count]
     }
 }

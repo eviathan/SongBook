@@ -21,7 +21,7 @@ public class Scale: CustomStringConvertible {
     }
     
     func chords(style: ChordStyle = .Triad) -> [ChordType] {
-        return ChordService.getChordTypes(self.type)
+        return ChordService.getChordTypes(self.type, style: style)
     }
     
     public var description: String {

@@ -12,7 +12,6 @@ public class Appendix {
     
     static let instance = Appendix()
     
-    
     public var chordTypes: [[Interval]:ChordType] = [[Interval]:ChordType]()
     
     private init() {
@@ -21,7 +20,9 @@ public class Appendix {
     
     private func getChordDict() -> [[Interval]:ChordType] {
         return ChordType.allCases.reduce(into: [[Interval]: ChordType]()) {
-            $0[$1.intervals] = $1
+            $0[$1.intervals.map({ i in
+                return Interval(rawValue: i.rawValue % 12)!
+            })] = $1
         }
     }
 }

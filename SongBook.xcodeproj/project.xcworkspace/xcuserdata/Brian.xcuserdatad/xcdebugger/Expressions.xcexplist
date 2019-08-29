@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "ScaleType.get(_:next:):ScaleType.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(currentIndex + nextIndex) % 11">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "main:main.swift">
       </ContextState>
       <ContextState

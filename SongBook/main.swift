@@ -16,7 +16,19 @@ import Foundation
 //print(Note.Eb.interval(key: .C))
 
 
-print(ChordService.getChordType(.I, .III, .V, .bVII))
-print(ChordService.getChordType(.I, .III, .V, .VII))
+//print(ChordService.getChordType(.I, .III, .V, .bVII))
+//print(ChordService.getChordType(.I, .III, .V, .VII))
+//
+//print(Chord(.C, .Min7b5).notes.invert(.Third))
 
-print(Chord(.C, .Min7b5).notes.invert(.Third))
+
+//print(ScaleType.Major(.Ionian).getInterval(.I, next: .III))
+//print(ScaleType.Major(.Ionian).getInterval(.III, next: .III))
+//print(ScaleType.Major(.Ionian).getInterval(.V, next: .III))
+//print(ScaleType.Major(.Ionian).getInterval(.VII, next: .III))
+//print(ScaleType.Major(.Ionian).getInterval(.II, next: .III))
+//print(ScaleType.Major(.Ionian).getInterval(.IV, next: .III))
+//print(ScaleType.Major(.Ionian§).getInterval(.VI, next: .III))
+
+
+print(ChordService.getChordTypes(.Major(.Ionian), style: .Triad))

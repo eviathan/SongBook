@@ -11,6 +11,7 @@ import Foundation
 // TODO: Figure out how to deal with optional notes
 public enum ChordType: String, CaseIterable, CustomStringConvertible {
     
+    case NA = "N/A"
     // Major
     case Maj = "M"
     case Add4 = "add4"
@@ -77,16 +78,18 @@ extension ChordType {
     var intervals: [Interval] {
         switch self {
             
+        case .NA: return []
+            
         // Major
         case .Maj: return [.I, .III, .V]
         case .Add4: return [.I, .III, .IV, .V]
         case .Sixth: return [.I, .III, .V, .VI]
-        case .SixNine: return [.I, .III, .V, .IX]
+        case .SixNine: return [.I, .II, .III, .V]
         case .Maj7: return [.I, .III, .V, .VII]
-        case .Maj9: return [.I, .III, .V, .VII, .IX]
-        case .Maj11: return [.I, .III, .V, .VII, .IX, .XI]
-        case .Maj13: return [.I, .III, .V, .VI, .IX, .XI, .XIII]
-        case .Maj7Sharp11: return [.I, .III, .V, .VII, .bXII]
+        case .Maj9: return [.I, .II, .III, .V, .VII]
+        case .Maj11: return [.I, .II, .III, .IV, .V, .VII]
+        case .Maj13: return [.I, .II, .III, .IV, .V, .VI, .VII]
+        case .Maj7Sharp11: return [.I, .III, .bV, .V, .VII]
         case .Majb5: return [.I, .III, .bV]
             
         // Minor
@@ -94,45 +97,45 @@ extension ChordType {
         case .MinAdd4: return [.I, .bIII, .IV, .V]
         case .Min6: return [.I, .bIII, .V, .VI]
         case .Min7: return [.I, .bIII, .V, .bVII]
-        case .MinAdd9: return [.I, .bIII, .V, .IX]
-        case .Min6Add9: return [.I, .bIII, .V, .VI, .IX]
-        case .Min9: return [.I, .bIII, .V, .bVII, .IX]
-        case .Min11: return [.I, .bIII, .V, .bVII, .IX, .XI]
-        case .Min13: return [.I, .bIII, .V, .bVII, .IX, .XI, .XIII]
+        case .MinAdd9: return [.I, .II, .bIII, .V]
+        case .Min6Add9: return [.I, .II, .bIII, .V, .VI]
+        case .Min9: return [.I, .II, .bIII, .V, .bVII]
+        case .Min11: return [.I, .II, .bIII, .IV, .V, .bVII]
+        case .Min13: return [.I, .II, .bIII, .IV, .V, .VI, .bVII]
         case .MinMaj7: return [.I, .bIII, .V, .VII]
-        case .MinMaj9: return [.I, .bIII, .V, .VII, .IX]
-        case .MinMaj11: return [.I, .bIII, .V, .VII, .IX, .XI]
-        case .MinMaj13: return [.I, .bIII, .V, .VII, .IX, .XI, .XIII]
+        case .MinMaj9: return [.I, .II, .bIII, .V, .VII]
+        case .MinMaj11: return [.I, .II, .bIII, .IV, .V, .VII]
+        case .MinMaj13: return [.I, .II, .bIII, .IV, .V, .VI, .VII]
         case .Min7b5: return [.I, .bIII, .bV, .bVII]
             
         // Dominant
         case .Dom7: return [.I, .III, .V, .bVII]
-        case .Dom9: return [.I, .III, .V, .bVII, .IX]
-        case .Dom11: return [.I, .III, .V, .bVII, .XI]
-        case .Dom13: return [.I, .III, .V, .bVII, .IX, .XI, .XIII]
+        case .Dom9: return [.I, .II, .III, .V, .bVII]
+        case .Dom11: return [.I, .II, .III, .IV, .V, .bVII]
+        case .Dom13: return [.I, .II, .III, .IV, .V, .IV, .bVII]
         case .Dom7Sharp5: return [.I, .III, .bVI, .bVII]
         case .Dom7b5: return [.I, .III, .bV, .bVII]
-        case .Dom7Sharp9: return [.I, .III, .V, .bVII, .bIX]
-        case .Dom7b9: return [.I, .III, .V, .bX]
-        case .Dom9Sharp5: return [.I, .III, .bVI, .bVII, .IX]
-        case .Dom9b5: return [.I, .III, .bV, .bVII, .IX]
-        case .Dom7Sharp5Sharp9: return [.I, .III, .bVI, .bVII, .bX]
-        case .Dom7Sharp5b9: return [.I, .III, .bVI, .bVII, .bIX]
-        case .Dom7b5Sharp9: return [.I, .III, .bV, .bVII, .bX]
-        case .Dom7b5b9: return [.I, .III, .bV, .bVII, .bIX]
-        case .Dom7Sharp11: return [.I, .III, .V, .bVII, .bXII]
+        case .Dom7Sharp9: return [.I, .bIII, .III, .V, .bVII]
+        case .Dom7b9: return [.I, .bII, .III, .V, .bVII]
+        case .Dom9Sharp5: return [.I, .II, .III, .bVI, .bVII]
+        case .Dom9b5: return [.I, .II, .III, .bV, .bVII]
+        case .Dom7Sharp5Sharp9: return [.I, .bIII, .III, .bVI, .bVII]
+        case .Dom7Sharp5b9: return [.I, .bII, .III, .bVI, .bVII]
+        case .Dom7b5Sharp9: return [.I, .bIII, .III, .bV, .bVII]
+        case .Dom7b5b9: return [.I, .bII, .III, .bV, .bVII]
+        case .Dom7Sharp11: return [.I, .III, .bV, .V, .bVII]
             
         // Symmetrical
-        case .Aug: return [.I, .III, .bVI]
-        case .Dim: return [.I, .bIII, .bVI]
-        case .Dim7: return [.I, .bIII, .bVI, .bVII]
+        case .Aug: return [.I, .III, .bV]
+        case .Dim: return [.I, .bIII, .bV]
+        case .Dim7: return [.I, .bIII, .bV, .bVII]
             
         // Misc
         case .Fifth: return [.I, .V]
         case .FlatFifth: return [.I, .bV]
         case .Sus4: return [.I, .IV, .V]
         case .Sus2: return [.I, .II, .V]
-        case .Sharp11: return [.I, .V, .bXII]
+        case .Sharp11: return [.I, .bV, .V]
         }
     }
     
